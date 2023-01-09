@@ -3,22 +3,96 @@
 
 <style type="text/css">
     #PageBG {
-        background: #181818;
-    }
-
-    #Header {
-        text-align: right;
-        color: #181818;
-    }
-
-    #carousel-caption {
-        color: #181818;
-        font-size: 24;
+        background: url(2.jpg) top no-repeat, #181818;
+        background-size: 100%;
     }
 
     #MainImg {
         width: 1280px;
         height: 960px;
+    }
+
+    #MainTitle {
+        text-align: center;
+        line-height: normal;
+        color: rgb(0, 0, 0);
+    }
+
+    #MainText {
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
+
+    #mainblank {
+        height: 1300px;
+    }
+
+    #ad {
+        opacity: 1;
+        transition: opacity 1s;
+        width: 290px;
+    }
+
+    #SubTitle {
+        text-align: center;
+        line-height: normal;
+        color: aliceblue;
+    }
+
+    #Text {
+        text-align: center;
+        float: left;
+        color: rgb(255, 255, 255);
+    }
+
+    #Content {
+        color: #FFFFFF;
+        background-color: #555555;
+    }
+
+    #v-pills-home-tab {
+        color: #FFFF69;
+    }
+
+    #v-pills-profile-tab {
+        color: #00ff22;
+    }
+
+    #v-pills-messages-tab {
+        color: #0099ff;
+    }
+
+    #v-pills-settings-tab {
+        color: #ff0000;
+    }
+
+    #textblank {
+        width: 50;
+    }
+
+    #blank {
+        width: 100%;
+        height: 25px;
+    }
+
+    #temp {
+        color: #FFFFFF;
+        background-color: #555555;
+
+    }
+
+    .disable-clicked {
+        cursor: not-allowed;
+        pointer-events: none;
+        text-decoration: none;
+    }
+
+
+    .dropdown-mainmenu {
+
+        width: 1700px;
+        height: 500px;
+
     }
 </style>
 
@@ -28,125 +102,375 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="foemcache.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body id="PageBG">
-    <div class="container">
+    <div class="row">
 
-        <nav class="navbar navbar-light bg-light navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">CSIE</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar1">
-                    <ol class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="justify-content-center col-11" style="margin:auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="AcWeb.html">首頁</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="ListWeb.html">學生專題列表</a>
-                        </li>
+            <div class="row">
+                <!--NavBar-->
+                <nav class="navbar navbar-dark bg-none navbar-expand-md">
+                    <div class="container-fluid bg-none">
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                id="navbarDropdown">專題顯示分類</a>
-                            <ul class="dropdown-menu">
-                                <li><span class="nav-header">使用語言</span></li>
-                                <li><a class="nav-link" href="LPWeb.html">Python</a></li>
-                                <li><a class="nav-link" href="LCWeb.html">C/C#/C++</a></li>
-                                <li><a class="nav-link" href="LHWeb.html">Js/Css/Html</a></li>
-                                <hr class="nav-dropdown-divider">
-                                <li><span class="nav-title">使用程式</span></li>
-                                <li><a class="nav-link" href="PHWeb.html">Jupyter</a></li>
-                                <li><a class="nav-link" href="PHWeb.html">VS/VSC</a></li>
-                                <li><a class="nav-link" href="PSWeb.html">Unity</a></li>
-                            </ul>
-                        </li>
+                        <div class="collapse navbar-collapse d-block" id="navbar1">
+                            <ol class="navbar-nav me-auto mb-2">
 
-                    </ol>
-                </div>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                        id="navbarDropdown">魔力之源</a>
+                                    <ul class="dropdown-menu dropdown-mainmenu">
 
-                <a class="navbar-brand" href="#" id="Header">
-                    <img src="icon.png" width="30" height="30">
-                </a>
+                                        <div class="row">
+                                            <div id="blank"></div>
+                                            <div id="blank"></div>
+                                            <div class="nav-title col-2" id="MainTitle"><strong>遊戲</strong></div>
+                                            <div class="nav-title col-2" id="MainTitle"><strong>美術</strong></div>
+                                            <div class="nav-title col-2" id="MainTitle"><strong>音樂</strong></div>
+                                            <div class="nav-title col-3" id="MainTitle">預示遊玩畫面</div>
+                                            <div class="nav-title col-3" id="MainTitle">圖二</div>
+                                            <div id="blank"></div>
+                                        </div>
 
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                                        <div class="row">
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                            </div>
+                                            <div class="nav- col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-3" id="MainTitle">
+                                                <img src="maingame.png" width="100%" alt="">
+                                            </div>
+                                            <div class="col-3" id="MainTitle">
+                                                <img src="maingame.png" width="100%" alt="">
+                                            </div>
+                                            <div id="blank"></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div id="blank"></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-3"></div>
+                                            <div id="blank"></div>
+                                        </div>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="AcWeb.html">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ListWeb.html">學生專題列表</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                        id="navbarDropdown">專題顯示分類</a>
+                                    <ul class="dropdown-menu">
+
+                                        <div class="row">
+                                            <li><span class="nav-header ">使用語言</span></li>
+                                            <li><a class="nav-link text-dark" href="LPWeb.html">Python</a></li>
+                                            <li><a class="nav-link text-dark" href="LCWeb.html">C/C#/C++</a></li>
+                                            <li><a class="nav-link text-dark" href="LHWeb.html">Js/Css/Html</a></li>
+                                        </div>
+
+                                        <hr class="nav-dropdown-divider">
+
+                                        <li>
+                                            <div class="col-12"><span class="nav-title">使用程式</span></div>
+                                        </li>
+                                        <li><a class="nav-link text-dark" href="PHWeb.html">Jupyter</a></li>
+                                        <li><a class="nav-link text-dark" href="PHWeb.html">VS/VSC</a></li>
+                                        <li><a class="nav-link text-dark" href="PSWeb.html">Unity</a></li>
+
+                                    </ul>
+                                </li>
+                            </ol>
+
+                            <form class="d-flex">
+                                <a class="navbar-brand" href="#" id="Header">
+                                    <img src="icon.png" width="30" height="30">
+                                </a>
+                                <input class="form-control" type="search" placeholder="Search" name="search" id="search"
+                                    aria-label="Search">
+                                <button class="btn btn-light btn-outline-success" name="search" type="submit"
+                                    onclick="processFormData();">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
 
             </div>
-        </nav>
-        <nav class="navbar navbar-default navbar-expand-sm"></nav>
-
-        <div class="alert alert-success alert-dismissible fade show" role="alert">真理大學三年級在學生 許安凱 製
-            <button type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close" id="alertR">
-            </button>
-        </div>
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">認為此排版醜陋者，內心腐朽 !
-            <button type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close" id="alertR">
-            </button>
-        </div>
-
-        <div class="carousel carousel-dark slide" data-bs-ride="carousel" id="myCarousel">
-            <div class="carousel-indicators">
-                <button data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
-                <button data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-                <button data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
-                <button data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
-                <button data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
+            <div class="row">
+                <div class="col-12" id="mainblank"></div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="1.jpg" class="d-sm-none d-md-block" alt="首圖" id="MainImg">
-                    <div class="carousel-caption d-sm-none d-md-block">
-                        <h2>圖一</h2>
+
+            <div class="row">
+                <!--Alert-->
+                <div class="col-12">
+
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">真理大學三年級在學生 許安凱 製
+                        <button type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close" id="alertR">
+                        </button>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="2.jpg" class="d-sm-none d-md-block" alt="次圖" id="MainImg">
-                    <div class="carousel-caption d-sm-none d-md-block">
-                        <h2>圖二</h2>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="3.jpg" class="d-sm-none d-md-block" alt="再圖" id="MainImg">
-                    <div class="carousel-caption d-sm-none d-md-block">
-                        <h2>圖三</h2>
-                        <p>內文</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="4.png" class="d-sm-none d-md-block" alt="色圖" id="MainImg">
-                    <div class="carousel-caption d-sm-none d-md-block">
-                        <h2>圖四</h2>
-                        <p>內文</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="5.jpg" class="d-sm-none d-md-block" alt="吾圖" id="MainImg">
-                    <div class="carousel-caption d-sm-none d-md-block">
-                        <h2>圖五</h2>
-                        <p>內文</p>
+
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">認為此排版醜陋者，內心腐朽 !
+                        <button type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close" id="alertR">
+                        </button>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev d-sm-none d-md-block" type="button" data-bs-target="#myCarousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Prev</span>
-            </button>
-            <button class="carousel-control-next d-sm-none d-md-block" type="button" data-bs-target="#myCarousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
+
+
+            <div class="row">
+                <!--Carousel-->
+                <div class="carousel carousel-fade slide d-none d-xl-block col-xl-2" data-bs-fade-
+                    data-bs-ride="carousel" id="LUCarousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="1750">
+                            <img src="ad/Main_Breath/Mainchareater_Animation_breath1.png" class="d-md-none d-lg-block"
+                                alt="" id="ad">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="ad/Main_Breath/Mainchareater_Animation_breath2.png" class="d-md-none d-lg-block"
+                                alt="" id="ad">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="ad/Main_Breath/Mainchareater_Animation_breath3.png" class="d-md-none d-lg-block"
+                                alt="" id="ad">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="ad/Main_Breath/Mainchareater_Animation_breath4.png" class="d-md-none d-lg-block"
+                                alt="" id="ad">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="ad/Main_Breath/Mainchareater_Animation_breath5.png" class="d-md-none d-lg-block"
+                                alt="" id="ad">
+                        </div>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="750">
+                            <img src="" class="d-md-none d-lg-block" alt="" id="ad">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="750">
+                            <img src="" class="d-md-none d-lg-block" alt="" id="ad">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1500">
+                            <img src="" class="d-md-none d-lg-block" alt="" id="ad">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel carousel-dark slide d-none d-md-block d-lg-block d-xl-block col-xl-8"
+                    data-bs-ride="carousel" id="MainCarousel">
+
+                    <div class="carousel-indicators">
+                        <button data-bs-target="#MainCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button data-bs-target="#MainCarousel" data-bs-slide-to="1"></button>
+                        <button data-bs-target="#MainCarousel" data-bs-slide-to="2"></button>
+                        <button data-bs-target="#MainCarousel" data-bs-slide-to="3"></button>
+                        <button data-bs-target="#MainCarousel" data-bs-slide-to="4"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <img src="1.jpg" class="d-sm-none d-md-block" alt="首圖" id="MainImg">
+                            <div class="carousel-caption d-sm-none d-md-block">
+                                <h2>圖一</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="2.jpg" class="d-sm-none d-md-block" alt="次圖" id="MainImg">
+                            <div class="carousel-caption d-sm-none d-md-block">
+                                <h2>圖二</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="3.jpg" class="d-sm-none d-md-block" alt="再圖" id="MainImg">
+                            <div class="carousel-caption d-sm-none d-md-block">
+                                <h2>圖三</h2>
+                                <p>內文</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="4.png" class="d-sm-none d-md-block" alt="色圖" id="MainImg">
+                            <div class="carousel-caption d-sm-none d-md-block">
+                                <h2>圖四</h2>
+                                <p>內文</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="5.jpg" class="d-sm-none d-md-block" alt="吾圖" id="MainImg">
+                            <div class="carousel-caption d-sm-none d-md-block">
+                                <h2>圖五</h2>
+                                <p>內文</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev d-sm-none d-md-block" type="button"
+                        data-bs-target="#MainCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Prev</span>
+                    </button>
+                    <button class="carousel-control-next d-sm-none d-md-block" type="button"
+                        data-bs-target="#MainCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+
+                <div class="d-none d-xl-block col-xl-2">
+                    <img src="card Front.png" id="ad">
+                    <img src="card Back.png" id="ad">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <!--Blank-->
+                <div class="col-12" id="blank"></div>
+            </div>
+
+            <div class="row">
+                <div class="row bg-none">
+                    <!--NavScroll-->
+                    <nav class="navbar flex-column align-items-stretch p-3" id="navscroll">
+
+                        <div class="row">
+                            <nav class="nav nav-pills flex-column">
+                                <a class="navbar-brand col-1" href="#item-0">遊戲簡介</a>
+                                <a class="nav-link col-1" href="#item-1">世界觀</a>
+                                <a class="nav-link col-1" href="#item-2">角色觀</a>
+                                <a class="nav-link ms-3 my-1 col-1" href="#item-2-1">亞人</a>
+                                <a class="nav-link ms-3 my-1 col-1" href="#item-2-2">魔物</a>
+                                <a class="nav-link col-1" href="#item-3">卡牌</a>
+                                <a class="nav-link ms-3 my-1 col-1" href="#item-3-1">路克</a>
+                                <a class="nav-link ms-3 my-1 col-1" href="#item-3-2">露米希</a>
+                        </div>
+                    </nav>
+
+                    <div class="text-light" data-bs-spy="scroll" data-bs-target="#navscroll" data-bs-offset="0"
+                        tabindex="0">
+
+                        <h3 id="item-0">遊戲簡介</h3>
+                        <p>本作是一款卡牌對戰結合彈幕的2D橫向卷軸遊戲。自由切換每位夥伴，收集豐富多樣的道具卡牌，躲避密集的彈幕。
+                            在一個高科技的世界，你將扮演星球保衛隊隊長，與敵人戰鬥，守護家園。</p>
+                        <h4 id="item-1">世界觀</h4>
+                        <p>魔力，魔力是一種無所不在的能量，它在生活中是必不可缺的能量，將魔力視為能源並活用這股能量的人被稱作術士，術士將魔力轉換成施放魔術的能源，
+                            魔術可以粗略分成三大種法術、醫術、秘術，每個術士都會有其擅長的種類，由於這些魔術大多需要熟知其詳細的原理，所以術士是以高智慧為聞名。
+                            極少數的孩子天生就能感知到魔力之源，魔力之源這能力會隨著時間而漸逝，這能力有助於這些孩子在成長期間學習使用魔力時，比他人更有天分。
+                            但若能力消逝就跟平凡人一樣，必須透過能自然產出魔力的魔晶石或是擁有發光能力的魔力塵，魔晶石與魔力塵可以增強魔力的轉換，這些資源可以被嵌入在防具武器飾品，
+                            當這項技術被研發出來後，術士慢慢變成常見的職業。在這個世界上會有一些魔力濃度過高以及環境高度壓縮的區域，在那個區域中魔力會與附近環境的元素凝聚成魔力聚合體，
+                            當魔力聚合物再吸收更多魔力後，就會變異成與當地環境有關的魔物，魔物的行動根據環境狀況賦予他們智慧高或低。在聖曆前3000年時魔力失控，用來穩定整個宇宙的魔力失衡，
+                            導致整個宇宙如漩渦般快速轉動，直至一切毀滅。毀滅之後，宇宙已無魔力。這時，在殘破不堪的新宇宙裡，一顆位於宇宙角落的星球，出現帶領著人類免於恐慌的英雄，
+                            這位英雄在各星系星球間懸壺濟世，並創立了聖曆，在沒有了魔力的空間下，人類將一切發展重心著重於科技的研究。聖曆2071年密斯特星發生了多起未知的異形襲擊事件，
+                            這些未知的異形透過傳送門，從天空中不斷湧出襲擊各地。賽逢城為這星球的總理城，該城城主緊急派遣眾多星球保衛隊前去鎮壓，玩家將扮演第一防衛隊隊長，為了關閉傳送門開始該遊戲。</p>
+                        <h4 id="item-2">角色觀</h4>
+                        <h5 class="ms-3 my-1" id="item-2-1">亞人</h5>
+                        <p class="ms-3 my-1">大多為可兩腳行走的獸形人種，相比於人類，亞人擁有更強的體質，但其性質對於魔力的操控較弱，所以亞人大多執行勞動或是守衛類型的工作。
+                            亞人本質還留有獸性，在未經人類治理的區域，常常會發生紛爭。</p>
+                        <h5 class="ms-3 my-1" id="item-2-2">魔物</h5>
+                        <p class="ms-3 my-1">由大量魔力濃縮的聚合體，會根據當地環境去形成外體，大多為智力低的魔物，
+                            他們被稱作低階魔物，反之智力高的為高階魔物，例如妖精、吸血鬼。</p>
+                        <h4 id="item-3">卡牌</h4>
+                        <p>本作四隻主要角色各有不同專屬卡組，各有其特殊的攻擊敵人以及增加生存能力的卡牌，此外還有輔助型卡組，輔助型卡牌又再分為通用與專屬卡。
+                            卡牌的使用需要透過體力或是魔力去觸發，角色有固定的體力魔力上限，可以透過科學家使自己的上限增加。進入關卡後將重置牌庫，所有擁有的卡牌都會洗回牌庫；
+                            自動洗牌或是手動洗牌而牌庫沒有尚餘的卡牌時，將會把棄牌堆的牌洗回牌庫。</p>
+                        <h5 class="ms-3 my-1" id="item-3-1">路克</h5>
+                        <p class="ms-3 my-1">路克的牌庫分為三大類，攻擊、防禦以及輔助型，因為路克是近戰攻擊型角色，攻擊卡牌消耗體力進行攻擊，防禦卡牌消耗體力格擋子彈，輔助卡牌消耗魔力得到特殊效果，
+                            另外他的部分卡牌是消耗魔力，例如增傷類、增益類、效果類，相關卡牌在第二章後逐漸開放</p>
+                        <h5 class="ms-3 my-1" id="item-3-2">露米希</h5>
+                        <p class="ms-3 my-1">露米希的牌庫分成兩大類，元素以及輔助，元素細分成火水土毒電風六種，各有不同的狀態效果，不同於主角，她是在遠距離施放彈幕對敵人攻擊，閃避彈幕的方式是透過位移來避開。
+                            她的卡牌絕大部分都會消耗魔力，唯獨她的輔助卡牌是消耗體力，且不具有專屬輔助卡牌。</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12" id="blank"></div>
+            </div>
+
+            <div class="row">
+                <!--NavPill-->
+                <div class="nav nav-pills flex-column col-2" style="height:960px" role="tablist" id="Content">
+                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">Home</button>
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">Profile</button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false">Messages</button>
+                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                        aria-selected="false">Settings</button>
+                </div>
+
+                <div class="tab-content col-8" id="Content">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">1
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">2
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">3
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">4
+                    </div>
+                </div>
+
+                <div class="tab-content col-2">
+
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

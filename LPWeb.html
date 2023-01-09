@@ -3,17 +3,96 @@
 
 <style type="text/css">
     #PageBG {
-        background: #181818;
+        background: url(2.jpg) top no-repeat, #181818;
+        background-size: 100%;
     }
 
-    #Header {
-        text-align: right;
-        color: #181818;
+    #MainImg {
+        width: 1280px;
+        height: 960px;
     }
 
-    #carousel-caption {
-        color: #181818;
-        font-size: 24;
+    #MainTitle {
+        text-align: center;
+        line-height: normal;
+        color: rgb(0, 0, 0);
+    }
+
+    #MainText {
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
+
+    #mainblank {
+        height: 1300px;
+    }
+
+    #ad {
+        opacity: 1;
+        transition: opacity 1s;
+        width: 290px;
+    }
+
+    #SubTitle {
+        text-align: center;
+        line-height: normal;
+        color: aliceblue;
+    }
+
+    #Text {
+        text-align: center;
+        float: left;
+        color: rgb(255, 255, 255);
+    }
+
+    #Content {
+        color: #FFFFFF;
+        background-color: #555555;
+    }
+
+    #v-pills-home-tab {
+        color: #FFFF69;
+    }
+
+    #v-pills-profile-tab {
+        color: #00ff22;
+    }
+
+    #v-pills-messages-tab {
+        color: #0099ff;
+    }
+
+    #v-pills-settings-tab {
+        color: #ff0000;
+    }
+
+    #textblank {
+        width: 50;
+    }
+
+    #blank {
+        width: 100%;
+        height: 25px;
+    }
+
+    #temp {
+        color: #FFFFFF;
+        background-color: #555555;
+
+    }
+
+    .disable-clicked {
+        cursor: not-allowed;
+        pointer-events: none;
+        text-decoration: none;
+    }
+
+
+    .dropdown-mainmenu {
+
+        width: 1700px;
+        height: 500px;
+
     }
 </style>
 
@@ -28,129 +107,216 @@
 </head>
 
 <body id="PageBG">
-    <div class="container">
+    <div class="row">
+        <div class="justify-content-center col-11" style="margin:auto">
 
-        <nav class="navbar navbar-light bg-light navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">CSIE</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar1">
-                    <ol class="navbar-nav me-auto mb-2 mb-lg-0">
-                        
-                        <li class="nav-item">
-                            <a class="nav-link active" href="AcWeb.html">首頁</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="ListWeb.html">學生專題列表</a>
-                        </li>
+            <div class="row">
+                <!--NavBar-->
+                <nav class="navbar navbar-dark bg-none navbar-expand-md">
+                    <div class="container-fluid bg-none">
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                id="navbarDropdown">專題顯示分類</a>
-                            <ul class="dropdown-menu">
-                                <li><span class="nav-header">使用語言</span></li>
-                                <li><a class="nav-link" href="LPWeb.html" aria-current="page">Python</a></li>
-                                <li><a class="nav-link" href="LAWeb.html">Arduino</a></li>
-                                <li><a class="nav-link" href="LCWeb.html">C/C#/C++</a></li>
-                                <li><a class="nav-link" href="LHWeb.html">Js/Css/Html</a></li>
-                                <hr class="nav-dropdown-divider">
-                                <li><span class="nav-title">使用程式</span></li>
-                                <li><a class="nav-link" href="PHWeb.html">Jupyter</a></li>
-                                <li><a class="nav-link" href="PHWeb.html">VS/VSC</a></li>
-                                <li><a class="nav-link" href="PSWeb.html">Unity</a></li>
-                            </ul>
-                        </li>
+                        <div class="collapse navbar-collapse d-block" id="navbar1">
+                            <ol class="navbar-nav me-auto mb-2">
 
-                    </ol>
-                </div>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                        id="navbarDropdown">魔力之源</a>
+                                    <ul class="dropdown-menu dropdown-mainmenu">
 
-                <a class="navbar-brand" href="#" id="Header">
-                    <img src="icon.png" width="30" height="30">
-                </a>
+                                        <div class="row">
+                                            <div id="blank"></div>
+                                            <div id="blank"></div>
+                                            <div class="nav-title col-2" id="MainTitle"><strong>遊戲</strong></div>
+                                            <div class="nav-title col-2" id="MainTitle"><strong>美術</strong></div>
+                                            <div class="nav-title col-2" id="MainTitle"><strong>音樂</strong></div>
+                                            <div class="nav-title col-3" id="MainTitle">預示遊玩畫面</div>
+                                            <div class="nav-title col-3" id="MainTitle">圖二</div>
+                                            <div id="blank"></div>
+                                        </div>
 
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                                        <div class="row">
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                            </div>
+                                            <div class="nav- col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-3" id="MainTitle">
+                                                <img src="maingame.png" width="100%" alt="">
+                                            </div>
+                                            <div class="col-3" id="MainTitle">
+                                                <img src="maingame.png" width="100%" alt="">
+                                            </div>
+                                            <div id="blank"></div>
+                                        </div>
 
-            </div>
-        </nav>
-      
-        <div class="accordion" id="myaccordion">
+                                        <div class="row">
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div id="blank"></div>
+                                        </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-title">
-                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#text1">AI體適能教練
-                    </button>
-                </h2>
-                <div id="text1" class="accordion-collapse collapse show" data-bs-parent="#myaccordion">
-                    <div class="accordion-body">
-                        <img src="109\AI體適能教練\AI體適能教練-畢業專題報告海報.JPG" class="w-100">
-                        <img src="109\AI體適能教練\螢幕擷取畫面 2023-01-06 180548.png" class="w-100">
-                        <img src="109\AI體適能教練\螢幕擷取畫面 2023-01-06 180531.png" class="w-100">
+                                        <div class="row">
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">遊戲</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-2" id="MainTitle">
+                                                <a class="nav-link text-dark" href="#">Python</a>
+                                            </div>
+                                            <div class="col-3"></div>
+                                            <div id="blank"></div>
+                                        </div>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="AcWeb.html">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ListWeb.html">學生專題列表</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                        id="navbarDropdown">專題顯示分類</a>
+                                    <ul class="dropdown-menu">
+
+                                        <div class="row">
+                                            <li><span class="nav-header ">使用語言</span></li>
+                                            <li><a class="nav-link text-dark" href="LPWeb.html">Python</a></li>
+                                            <li><a class="nav-link text-dark" href="LCWeb.html">C/C#/C++</a></li>
+                                            <li><a class="nav-link text-dark" href="LHWeb.html">Js/Css/Html</a></li>
+                                        </div>
+
+                                        <hr class="nav-dropdown-divider">
+
+                                        <li>
+                                            <div class="col-12"><span class="nav-title">使用程式</span></div>
+                                        </li>
+                                        <li><a class="nav-link text-dark" href="PHWeb.html">Jupyter</a></li>
+                                        <li><a class="nav-link text-dark" href="PHWeb.html">VS/VSC</a></li>
+                                        <li><a class="nav-link text-dark" href="PSWeb.html">Unity</a></li>
+
+                                    </ul>
+                                </li>
+                            </ol>
+
+                            <form class="d-flex">
+                                <a class="navbar-brand" href="#" id="Header">
+                                    <img src="icon.png" width="30" height="30">
+                                </a>
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-light btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-title">
-                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#text3">以電腦視覺為基礎之動作正確性評估
-                    </button>
-                </h2>
-                <div id="text3" class="accordion-collapse collapse" data-bs-parent="#myaccordion">
-                    <div class="accordion-body">
-                        <img src="109\以電腦視覺為基礎之動作正確性評估\螢幕擷取畫面 2023-01-06 180327.png" class="w-100">
-                        <img src="109\以電腦視覺為基礎之動作正確性評估\螢幕擷取畫面 2023-01-06 180346.png" class="w-100">
-                        <img src="109\以電腦視覺為基礎之動作正確性評估\螢幕擷取畫面 2023-01-06 180401.png" class="w-100">
-                    </div>
-                </div>
+                </nav>
             </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-title">
-                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#text6">供應鏈BC應用
-                    </button>
-                </h2>
-                <div id="text6" class="accordion-collapse collapse " data-bs-parent="#myaccordion">
-                    <div class="accordion-body">
-                        <img src="109\供應鏈BC應用\螢幕擷取畫面 2023-01-06 180115.png" class="w-100">
-                        <img src="109\供應鏈BC應用\螢幕擷取畫面 2023-01-06 180130.png" class="w-100">
-                        <img src="109\供應鏈BC應用\螢幕擷取畫面 2023-01-06 180146.png" class="w-100">
+            <div class="row">
+                <div class="accordion" id="myaccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-title">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#text1">AI體適能教練
+                            </button>
+                        </h2>
+                        <div id="text1" class="accordion-collapse collapse show" data-bs-parent="#myaccordion">
+                            <div class="accordion-body">
+                                <img src="109\AI體適能教練\AI體適能教練-畢業專題報告海報.JPG" class="w-100">
+                                <img src="109\AI體適能教練\螢幕擷取畫面 2023-01-06 180548.png" class="w-100">
+                                <img src="109\AI體適能教練\螢幕擷取畫面 2023-01-06 180531.png" class="w-100">
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-title">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#text3">以電腦視覺為基礎之動作正確性評估
+                            </button>
+                        </h2>
+                        <div id="text3" class="accordion-collapse collapse" data-bs-parent="#myaccordion">
+                            <div class="accordion-body">
+                                <img src="109\以電腦視覺為基礎之動作正確性評估\螢幕擷取畫面 2023-01-06 180327.png" class="w-100">
+                                <img src="109\以電腦視覺為基礎之動作正確性評估\螢幕擷取畫面 2023-01-06 180346.png" class="w-100">
+                                <img src="109\以電腦視覺為基礎之動作正確性評估\螢幕擷取畫面 2023-01-06 180401.png" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-title">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#text6">供應鏈BC應用
+                            </button>
+                        </h2>
+                        <div id="text6" class="accordion-collapse collapse " data-bs-parent="#myaccordion">
+                            <div class="accordion-body">
+                                <img src="109\供應鏈BC應用\螢幕擷取畫面 2023-01-06 180115.png" class="w-100">
+                                <img src="109\供應鏈BC應用\螢幕擷取畫面 2023-01-06 180130.png" class="w-100">
+                                <img src="109\供應鏈BC應用\螢幕擷取畫面 2023-01-06 180146.png" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-title">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#text9">笑臉島
+                            </button>
+                        </h2>
+                        <div id="text9" class="accordion-collapse collapse " data-bs-parent="#myaccordion">
+                            <div class="accordion-body">
+                                <img src="109\笑臉島\螢幕擷取畫面 2023-01-06 174743.png" class="w-100">
+                                <img src="109\笑臉島\螢幕擷取畫面 2023-01-06 174810.png" class="w-100">
+                                <img src="109\笑臉島\螢幕擷取畫面 2023-01-06 174833.png" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-title">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#text15">運動追蹤輔助系統
+                            </button>
+                        </h2>
+                        <div id="text15" class="accordion-collapse collapse " data-bs-parent="#myaccordion">
+                            <div class="accordion-body">
+                                <img src="109\運動追蹤輔助系統\海報與折張（可編輯之檔案）\運動追蹤輔助系統(海報).JPG" class="w-100">
+                                <img src="109\運動追蹤輔助系統\海報與折張（可編輯之檔案）\螢幕擷取畫面 2023-01-06 182120.png" class="w-100">
+                                <img src="109\運動追蹤輔助系統\海報與折張（可編輯之檔案）\螢幕擷取畫面 2023-01-06 182137.png" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-title">
-                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#text9">笑臉島
-                    </button>
-                </h2>
-                <div id="text9" class="accordion-collapse collapse " data-bs-parent="#myaccordion">
-                    <div class="accordion-body">
-                        <img src="109\笑臉島\螢幕擷取畫面 2023-01-06 174743.png" class="w-100">
-                        <img src="109\笑臉島\螢幕擷取畫面 2023-01-06 174810.png" class="w-100">
-                        <img src="109\笑臉島\螢幕擷取畫面 2023-01-06 174833.png" class="w-100">
-                    </div>
-                </div>
-            </div>         
-
-            <div class="accordion-item">
-                <h2 class="accordion-title">
-                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#text15">運動追蹤輔助系統
-                    </button>
-                </h2>
-                <div id="text15" class="accordion-collapse collapse " data-bs-parent="#myaccordion">
-                    <div class="accordion-body">
-                        <img src="109\運動追蹤輔助系統\海報與折張（可編輯之檔案）\運動追蹤輔助系統(海報).JPG" class="w-100">
-                        <img src="109\運動追蹤輔助系統\海報與折張（可編輯之檔案）\螢幕擷取畫面 2023-01-06 182120.png" class="w-100">
-                        <img src="109\運動追蹤輔助系統\海報與折張（可編輯之檔案）\螢幕擷取畫面 2023-01-06 182137.png" class="w-100">
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </div>
+
 </body>
+
 </html>
